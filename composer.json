@@ -1,0 +1,29 @@
+{
+	"name"             : "humanmade/comment_popularity",
+	"description"      : "WordPress comment rating system",
+	"minimum-stability": "stable",
+	"keywords"   : ["wordpress"],
+	"homepage"   : "https://github.com/humanmade/comment-popularity",
+	"license"    : "GPL-2.0+",
+	"config": {
+		"vendor-dir": "inc/lib"
+	},
+	"authors"          : [
+		{
+			"name" : "Human Made Limited",
+			"email": "hello@humanmade.co.uk"
+		}
+	],
+	"support"    : {
+		"issues": "https://github.com/humanmade/comment-popularity/issues"
+	},
+	"autoload"   : {
+		"classmap": ["comment-popularity.php"]
+	},
+	"require": {
+		"twig/twig": "2.*"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "*"
+	}
+}

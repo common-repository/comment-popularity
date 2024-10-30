@@ -1,0 +1,31 @@
+<div class="{% for class in container_classes %}{{ class }} {% endfor %}">
+
+	{% if enable_voting == true %}
+
+		{% if vote_type == 'upvote' %}
+			<span class="{{ vote_type }}">
+		{% else %}
+			<span>
+		{% endif %}
+				<a data-comment-id="{{ comment_id }}" class="vote-up" href="#">&#9650;</a>
+			</span>
+
+		<span id="comment-weight-value-{{ comment_id }}"  class="{{ vote_type }}">{{ comment_weight }}</span>
+
+		{% if vote_type == 'downvote' %}
+			<span class="{{ vote_type }}">
+		{% else %}
+			<span>
+		{% endif %}
+				<a data-comment-id="{{ comment_id }}" class="vote-down" href="#">&#9660;</a>
+			</span>
+
+	{% else %}
+
+		<span>&#9650;</span>
+		<span id="comment-weight-value-{{ comment_id }}">{{ comment_weight }}</span>
+		<span>&#9660;</span>
+
+	{% endif %}
+
+</div>
